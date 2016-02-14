@@ -39,11 +39,22 @@ Logger.Info(new
     message = "test 1"
 });
 
+// Nested
+Logger.Warn(new
+{
+    number = 54321,
+    message = "test 3",
+    some_obj = new{
+        name = "nested object",
+        value = 0.99,
+    }
+});
+
 // Exceptions
 Logger.Error(new
 {
     value = 789.12,
-    message = "test 3"
+    message = "test 4"
 }, new ApplicationException());
 ```
 
